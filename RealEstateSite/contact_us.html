@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <!-- Contact Form Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="styles1.css">
+
+    </head>
+
+<body>
+
+        <header>
+          <!-- Navigation Bar -->
+                  <div class = "wrapper">
+                    <div class = "logo">
+                        <a href ="homepage.html">
+                        <img src="state_sjsu.png" alt ="Real Estate Logo"></a>
+                    </div>
+                    <ul class= "nav-area">
+                        <li><a href = "homepage.html">Home</a></li>
+                        <li><a href = "contact_us.html">Contact Us</a></li>
+                        <li><a href = "#">Our Listings</a></li>
+                        <li><a href = "AboutUs.html">About Us</a></li>
+                        <li><a href = "login.html">User Login</a></li>
+                    </ul>
+                </div>
+            </header>
+    
+      
+<h3 class = logtitle> Contact Us Below!</h3>
+          
+          <!-- Contact Form -->
+          <form method = "post" action = "user.html">
+            <!-- input First Name -->
+            <label>First Name<input type="text" class="form-control" id="inputFirstName" placeholder="John" required></label>
+            <!-- input Last Name -->
+            <label>Last Name<input type="text" class="form-control" id="inputLastName" placeholder = "Doe" required></label>
+            <!-- input Email -->
+            <label>Email<input type="email" class="form-control" id="inputEmail4" placeholder="abc@email.com" required></label>
+            <!-- input Phone Number -->
+            <label>Phone Number<input type="tel" class="form-control" id="inputPhone" placeholder="(XXX)XXX-XXXX" required></label>
+            <!-- input Message Subject -->
+            <label>Subject<input type="text" class="form-control" id="inputSubject" placeholder="eg. Looking to rent an apartment!"></label>
+            <!-- input Body of Message -->
+            <label>Message<textarea name="comments" class="form-control" id="inputcomments" rows = "4" cols = "36" placeholder="Add inquiry details here..." required></textarea></label>
+            <!-- Send Button -->
+            <button type="submit" class="logbutton">Send Inquiry</button>
+          </form>
+        </div>
+    </body>
+</html>
