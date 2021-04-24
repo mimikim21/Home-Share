@@ -12,44 +12,79 @@
     </head>
 
 <body>
-
-        <header>
-          <!-- Navigation Bar -->
-                  <div class = "wrapper">
-                    <div class = "logo">
-                        <a href ="homepage.html">
-                        <img src="state_sjsu.png" alt ="Real Estate Logo"></a>
-                    </div>
-                    <ul class= "nav-area">
-                        <li><a href = "homepage.html">Home</a></li>
-                        <li><a href = "contact_us.html">Contact Us</a></li>
-                        <li><a href = "#">Our Listings</a></li>
-                        <li><a href = "AboutUs.html">About Us</a></li>
-                        <li><a href = "login.html">User Login</a></li>
-                    </ul>
-                </div>
-            </header>
-    
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html"><img src="state_sjsu.png" alt="" width="90" height="50"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Listings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">User Login</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
       
-<h3 class = logtitle> Contact Us Below!</h3>
-          
-          <!-- Contact Form -->
-          <form method = "post" action = "user.html">
-            <!-- input First Name -->
-            <label>First Name<input type="text" class="form-control" id="inputFirstName" placeholder="John" required></label>
-            <!-- input Last Name -->
-            <label>Last Name<input type="text" class="form-control" id="inputLastName" placeholder = "Doe" required></label>
-            <!-- input Email -->
-            <label>Email<input type="email" class="form-control" id="inputEmail4" placeholder="abc@email.com" required></label>
-            <!-- input Phone Number -->
-            <label>Phone Number<input type="tel" class="form-control" id="inputPhone" placeholder="(XXX)XXX-XXXX" required></label>
-            <!-- input Message Subject -->
-            <label>Subject<input type="text" class="form-control" id="inputSubject" placeholder="eg. Looking to rent an apartment!"></label>
-            <!-- input Body of Message -->
-            <label>Message<textarea name="comments" class="form-control" id="inputcomments" rows = "4" cols = "36" placeholder="Add inquiry details here..." required></textarea></label>
-            <!-- Send Button -->
-            <button type="submit" class="logbutton">Send Inquiry</button>
-          </form>
-        </div>
+<!-- Hero Image/Hero Text (aka header) -->
+<div class="head-image">
+  <img height="300">
+<div class="hero-text">
+  <h1><b>Contact Us</b></h1>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="contact-info">
+<form class="row g-3">
+<!-- input First Name -->
+<div class="col-md-6">
+  <label for="inputFirstName" class="form-label">First Name</label>
+  <input type="text" class="form-control" id="inputFirstName" required>
+  </div>
+<!-- input Last Name -->
+<div class="col-md-6">
+  <label for="inputLastName" class="form-label">Last Name</label>
+  <input type="text" class="form-control" id="inputLastName" required>
+  </div>
+<!-- input Email -->
+<div class="col-md-6">
+  <label for="inputEmail4" class="form-label">Email</label>
+  <input type="email" class="form-control" id="inputEmail4" placeholder="abc@email.com" required>
+  </div>
+<!-- input Phone Number -->
+<div class="col-6">
+  <label for="inputPhone" class="form-label">Phone Number</label>
+  <input type="tel" class="form-control" id="inputPhone" placeholder="(XXX)XXX-XXXX" required>
+  </div>
+<!-- input Message Subject -->
+<div class="col-md-12">
+  <label for="inputSubject" class="form-label">Subject</label>
+  <input type="text" class="form-control" id="inputSubject">
+</div>
+<!-- input Body of Message -->
+<div class="col-12">
+  <label for="inputcomments" class="form-label">Message</label>
+  <textarea name="comments" class="form-control" id="inputcomments" rows = "4" cols = "36" required></textarea>
+</div>
+<!-- Send Button -->
+<div class="col-12">
+  <button type="submit" class="btn btn-primary">Send</button>
+</div>
+</form>
+</div>
     </body>
 </html>
