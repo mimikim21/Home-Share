@@ -27,6 +27,11 @@ body     { font-family: fantasy;
           transform: translate(-50%, -50%);
           color: white;
         }
+        .dropdown-menu{
+                width: 300px;
+                background-color: black;
+                color: white;
+        }
 /*form{margin: auto;
             background-color:rgb(198, 223, 236);
             max-width: 350px;
