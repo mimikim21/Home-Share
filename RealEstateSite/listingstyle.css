@@ -7,6 +7,10 @@
 }
 
 body {
+  background-image: url(Irvine_Company.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
   width: 100vw;
   height: auto;
 }
@@ -67,9 +71,3 @@ body {
 }
 
 
-.header {
-  background-image: url(Irvine_Company_png);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
