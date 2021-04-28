@@ -14,14 +14,7 @@ body {
   width: 100vw;
   height: auto;
 }
-.header {
-  width: 80vw;
-  height: 120px;
-  margin: 2% auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .active {
   text-decoration: none;
   padding: 24px;
