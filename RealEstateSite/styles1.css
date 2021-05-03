@@ -1,9 +1,9 @@
-body     { font-family: fantasy; 
-        background-color:lightgrey;}
+body{ font-family:Arial, Helvetica, sans-serif; 
+background-color:lightgrey;}
         .logtitle       { font-size : 50px; 
                         text-align: center; 
                         color: rgb(230, 189, 57);
-                        font-family: fantasy;
+                        font-family: Arial, Helvetica, sans-serif;
                         position:relative;
                         top: 90px
       }
@@ -32,65 +32,6 @@ body     { font-family: fantasy;
                 background-color: black;
                 color: white;
         }
-/*form{margin: auto;
-            background-color:rgb(198, 223, 236);
-            max-width: 350px;
-            position:relative;
-            top: 100px;
-            padding: 20px 40px;
-            font-family: fantasy;
-            border: 2px solid rgb(230, 189, 57);
-            }  
-    
-    input    { padding: 12px 20px;
-                 font-size: inherit;
-                 font-family: fantasy;
-      }
-      
-    input[type ="text"] 
-       { display: inline-block;
-            box-sizing:content-box;
-            margin: 5px 0;
-            padding: 10px 10px;
-            width: 250px;
-            border: 2px steelblue;
-            font-family: fantasy;}
-      
-    input[type ="password"] 
-      { display: inline-block; 
-            box-sizing: border-box;
-            margin: 8px 0;
-            padding: 12px 20px;
-            width:100%;
-            border: 2px steelblue;
-            font-family: fantasy;} 
-      
-    .logbutton
-      { margin: auto;
-              font-size: 14px;
-      width: 270px;
-      height: 35px;
-      border: 2px solid rgb(230, 189, 57);
-      background: steelblue;
-      text-transform: capitalize;
-      color: white;
-      text-align: center;
-      font-family: fantasy;
-      }
-      
-    .label {position: static;
-    width:100%;
-    display: block;
-    margin: 1px;
-    color:rgb(230, 189, 57);
-    font-family: fantasy;
-    font-size: 14px;
-    font-weight: bold;}
-      
-      * {
-              margin: 0;
-              padding: 0
-      }
       /*Positions body*/
       .wrapper
             {
@@ -113,7 +54,7 @@ body     { font-family: fantasy;
             position: absolute;
             margin: 15% 30%;
             text-align: center;
-            font-family: fantasy;
+            font-family: Arial, Helvetica, sans-serif;
       }
       /*Alters h1 font within .welcome-text class */
       .welcome-text h1{
@@ -122,7 +63,7 @@ body     { font-family: fantasy;
               font-weight: bold;
               text-transform: uppercase;
               font-size: 60 px;
-              font-family: fantasy;
+              font-family: Arial, Helvetica, sans-serif;
       }
       .welcome-text a{
               border: 1px solid rgb(255, 255, 255);
@@ -148,94 +89,53 @@ body     { font-family: fantasy;
               height: 300px;
               margin: 20% 30%;
               text-align: center;
-              font-family: fantasy;
+              font-family: Arial, Helvetica, sans-serif;
               font-size: 20px;
               color: white;
       }
-      
-    html {
-              box-sizing: border-box
-              ;
-              
+
+    /*html {
+                box-sizing: border-box;
               }
               *, *:before, *:after {
-              box-sizing: inherit
-              ;
-              
-              }
+              box-sizing: inherit;   
+              }*/
           .about_column {
-              float: left
-              ;
-              width: 33.3%
-              ;
-              margin-bottom: 16px
-              ;
-              
-              padding:
-              0 8px
-              ;
+              float: left;
+              width: 33.3%;
+              margin-bottom: 16px;
+              padding:0 8px;
               background-color:white;
-              
               }
-          .card {
-              box-shadow:
-              
-              0 4px 8px
-              0 rgba
-              (
-              0,
-              0,
-              0, 0.2);
-              
-              margin: 8px
-              ;
-              
+        .card {
+              box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              margin: 8px;
               }
-          .about-section {
-              padding: 50px
-              ;
-              text-align: center
-              ;
-              background-color: #1d497ae3
-              ;
-              
-              color: rgb
-              
-              (248, 246, 238);
-              
+        .about-section {
+                padding: 50px;
+                text-align: center;
+                background-color: #1d497ae3;
+                color: rgb(248, 246, 238);
+                }
+        .about-body {
+                color: #fff;
+                text-align:justify;
+                }
+        .about-title {
+                text-align: center;
+                }
+        .container {
+              padding:0 16px;
               }
-              .about-body {
-                      color: #fff;
-                      text-align:justify;
+        .container::after, .row::after {
+              content: "";
+              clear: both;
+              display: table;
               }
-      
-              .about-title {
-                      text-align: right;
+        .title {
+              color: rgb(3, 3, 3);
               }
-          .container {
-              padding:
-              0 16px
-              ;
-              
-              }
-          .container::after, .row::after {
-              content: ""
-              ;
-              clear: both
-              ;
-              display: table
-              ;
-              
-              }
-          .title {
-              color: rgb
-              (
-              3,
-              3,
-              3);
-              
-              }
-          .button {
+        .button {
               font-size: 14px;
               width: 372px;
               height: 45 px;
@@ -244,22 +144,12 @@ body     { font-family: fantasy;
               text-transform: capitalize;
               color: white;
               text-align: center;
-              font-family: fantasy;
-              ;
-              outline:
-              0
-              ;
-              
-              display: inline-block
-              ;
-              
-              padding: 8px
-              ;
-              cursor: pointer
-              ;
-              width: 100%
-              ;
-              
+              font-family: Arial, Helvetica, sans-serif;
+              outline: 0;
+              display: inline-block;
+              padding: 8px;
+              cursor: pointer;
+              width: 100%;
               }
           @media screen and (max-width: 650px) {
       .column {width: 100%;
