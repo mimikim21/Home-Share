@@ -1,0 +1,17 @@
+{
+    "contactdetail":[{
+        "firstName":"Jane",
+        "lastName":"Doe",
+        "email":"janedoe@gmail.com",
+        "phone":"1234567890",
+        "subject":"hello",
+        "comments":"this is a test"
+        },{
+            "firstName":"Jon",
+            "lastName":"Doe",
+            "email":"jondoe@gmail.com",
+            "phone":"9098765432",
+            "subject":"Looking to rent",
+            "comments":"I'm looking to rent a place!"
+            }]
+        }
