@@ -38,7 +38,7 @@
                       </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Login</a>
-                        <form class="dropdown-menu p-4">
+                        <form method="POST" class="dropdown-menu p-4">
                           <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="username" placeholder="email@example.com" required>
@@ -47,7 +47,7 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Password" required>
                           </div>
-                          <button type="submit" class="btn btn-primary">Sign in</button>
+                          <button type="button" onclick="login()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" >Sign in</button>
                         </form>
                     </li>
                   </ul>
@@ -55,6 +55,25 @@
             </div>
           </nav>
     </div>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="logintModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        You Are Logged In
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <div class = "hero-image">
         <div class="welcome-text">
           <h1>Tell Us What You're Looking For!</h1>
@@ -63,4 +82,29 @@
           </div>
         </div>
       </div>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+      <script>
+      // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAnNtdNblvTkk_eOkoa0AQH9F-oCzNRb3Y",
+          authDomain: "login-8fd75.firebaseapp.com",
+          databaseURL: "https://login-8fd75-default-rtdb.firebaseio.com",
+          projectId: "login-8fd75",
+          storageBucket: "login-8fd75.appspot.com",
+          messagingSenderId: "338903581615",
+          appId: "1:338903581615:web:10e421ad512fb8d7d3a55a"
+            };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+      </script>
+  <script src="login.js"></script>
 </body>
