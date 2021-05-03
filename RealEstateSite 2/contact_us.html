@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <!-- Contact Form Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="styles1.css">
+
+    </head>
+
+<body>
+  <!-- Nav Bar -->
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="homepage.html"><img src="state_sjsu.png" alt="" width="90" height="50"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact_us.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="listings_page.html">Our Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Login</a>
+                    <form method="POST" class="dropdown-menu p-4">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="username" placeholder="email@example.com" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                      </div>
+                      <button type="button" onclick="login()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" >Sign in</button>
+                    </form>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" >
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="logintModalLabel">Login</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  </div>
+  <div class="modal-body">
+    You Are Logged In
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+  </div>
+</div>
+</div>
+</div>
+      
+<!-- Hero Image/Hero Text (aka header) -->
+<div class="head-image">
+  <img height="300">
+<div class="hero-text">
+  <h1><b>Contact Us</b></h1>
+</div>
+</div>
+
+<!-- Contact Form -->
+<div class="contact-info">
+<form method="POST" class="row g-3">
+<!-- input First Name -->
+<div class="col-md-6">
+  <label for="firstName" class="form-label">First Name</label>
+  <input type="text" id="firstName" class="form-control" required>
+  </div>
+<!-- input Last Name -->
+<div class="col-md-6">
+  <label for="lastName" class="form-label">Last Name</label>
+  <input type="text" id="lastName" class="form-control" required>
+  </div>
+<!-- input Email -->
+<div class="col-md-6">
+  <label for="email" class="form-label">Email</label>
+  <input type="email" id="email" class="form-control" placeholder="abc@email.com" required>
+  </div>
+<!-- input Phone Number -->
+<div class="col-6">
+  <label for="phone" class="form-label">Phone Number</label>
+  <input type="tel" id="phone" class="form-control" placeholder="(XXX)XXX-XXXX" required>
+  </div>
+<!-- input Message Subject -->
+<div class="col-md-12">
+  <label for="subject" class="form-label">Subject</label>
+  <input type="text" id="subject" class="form-control">
+</div>
+<!-- input Body of Message -->
+<div class="col-12">
+  <label for="comments" class="form-label">Message</label>
+  <textarea name="comments" id="comments" class="form-control" rows = "4" cols = "36" required></textarea>
+</div>
+<!-- Send Button -->
+<div class="col-12">
+  <button type="button" onclick="send()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal" >Send</button>
+</div>
+</form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Your Message Was Sent
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC5GerHx_xpLVXn04jlqypMF14TKJ7Y4X0",
+    authDomain: "contact-us-7178a.firebaseapp.com",
+    databaseURL: "https://contact-us-7178a-default-rtdb.firebaseio.com",
+    projectId: "contact-us-7178a",
+    storageBucket: "contact-us-7178a.appspot.com",
+    messagingSenderId: "527672547869",
+    appId: "1:527672547869:web:50f4a0e49945d5f46f04f4"
+  };
+  var secondaryAppConfig = {
+    apiKey: "AIzaSyAnNtdNblvTkk_eOkoa0AQH9F-oCzNRb3Y",
+    authDomain: "login-8fd75.firebaseapp.com",
+    databaseURL: "https://login-8fd75-default-rtdb.firebaseio.com",
+    projectId: "login-8fd75",
+    storageBucket: "login-8fd75.appspot.com",
+    messagingSenderId: "338903581615",
+    appId: "1:338903581615:web:10e421ad512fb8d7d3a55a"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(secondaryAppConfig);
+  
+  var database1=firebase.database();
+  var database2 =firebase.database(secondaryAppConfig);
+</script>
+  <script src="contact_us.js"></script>
+  <script src="login.js"></script>
+    </body>
+</html>

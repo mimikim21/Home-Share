@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  background-color:lightgrey;
+  background-image: url(Irvine_Company.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+.header {
+  width: 80vw;
+  height: 120px;
+  margin: 2% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active {
+  text-decoration: none;
+  padding: 24px;
+  color: coral;
+  text-transform: uppercase;
+  font-size: medium;
+  font-family: "Kiwi Maru", serif;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: rgb(228, 221, 146);
+  font-size: 80px;
+  font-family: "Train One", cursive;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#box {
+  width: 900;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box #left {
+  width: 300px;
+  float: left;
+}
+
+/* Style the buttons */
+.btn1 {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #d6d6d6;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Add a light grey background on mouse-over */
+.btn1:hover {
+  background-color: rgb(187, 232, 240);
+}
+.dropdown-menu{
+  width: 300px;
+  background-color: black;
+  color: white;
+}
