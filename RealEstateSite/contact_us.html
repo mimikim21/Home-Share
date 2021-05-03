@@ -37,7 +37,7 @@
                 <form class="dropdown-menu p-4">
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="email@example.com" required>
                   </div>
                   <div class="form-group">
                     <label for="password">Password</label>
@@ -58,44 +58,70 @@
   <h1><b>Contact Us</b></h1>
 </div>
 </div>
+
 <!-- Contact Form -->
 <div class="contact-info">
-<form class="row g-3">
+<form method="POST" class="row g-3">
 <!-- input First Name -->
 <div class="col-md-6">
   <label for="firstName" class="form-label">First Name</label>
-  <input type="text" class="form-control" id="inputFirstName" required>
+  <input type="text" id="firstName" class="form-control" required>
   </div>
 <!-- input Last Name -->
 <div class="col-md-6">
   <label for="lastName" class="form-label">Last Name</label>
-  <input type="text" class="form-control" id="inputLastName" required>
+  <input type="text" id="lastName" class="form-control" required>
   </div>
 <!-- input Email -->
 <div class="col-md-6">
   <label for="email" class="form-label">Email</label>
-  <input type="email" class="form-control" id="inputEmail" placeholder="abc@email.com" required>
+  <input type="email" id="email" class="form-control" placeholder="abc@email.com" required>
   </div>
 <!-- input Phone Number -->
 <div class="col-6">
   <label for="phone" class="form-label">Phone Number</label>
-  <input type="tel" class="form-control" id="inputPhone" placeholder="(XXX)XXX-XXXX" required>
+  <input type="tel" id="phone" class="form-control" placeholder="(XXX)XXX-XXXX" required>
   </div>
 <!-- input Message Subject -->
 <div class="col-md-12">
   <label for="subject" class="form-label">Subject</label>
-  <input type="text" class="form-control" id="inputSubject">
+  <input type="text" id="subject" class="form-control">
 </div>
 <!-- input Body of Message -->
 <div class="col-12">
   <label for="comments" class="form-label">Message</label>
-  <textarea name="comments" class="form-control" id="inputcomments" rows = "4" cols = "36" required></textarea>
+  <textarea name="comments" id="comments" class="form-control" rows = "4" cols = "36" required></textarea>
 </div>
 <!-- Send Button -->
 <div class="col-12">
-  <button type="submit" class="btn btn-primary">Send</button>
+  <button onclick="send()" class="btn btn-primary">Send</button>
 </div>
 </form>
 </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC5GerHx_xpLVXn04jlqypMF14TKJ7Y4X0",
+    authDomain: "contact-us-7178a.firebaseapp.com",
+    databaseURL: "https://contact-us-7178a-default-rtdb.firebaseio.com",
+    projectId: "contact-us-7178a",
+    storageBucket: "contact-us-7178a.appspot.com",
+    messagingSenderId: "527672547869",
+    appId: "1:527672547869:web:50f4a0e49945d5f46f04f4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+</script>
+<script src="contact_us.js"></script>
     </body>
 </html>
