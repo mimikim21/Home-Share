@@ -392,45 +392,87 @@
 
 
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="homepage.html"><img src="state_sjsu.png" alt="" width="90" height="50"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="homepage.html">Home</a>
+      <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black;">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html"><img src="state_sjsu.png" alt="" width="90" height="50"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact_us.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listings_page.html">Our Listings</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="AboutUs.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact_us.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="listings_page.html">Our Listings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="AboutUs.html">About Us</a>
-                  </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Login</a>
-                    <form class="dropdown-menu p-4">
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
-                      </div>
-                      <button onclick="send()" class="btn btn-primary">Sign in</button>
-                    </form>
-                </li>
-              </ul>
-          </div>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Login</a>
+                  <div id="login" class="dropdown-menu p-4">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email_field" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password_field" placeholder="Password" required>
+                    </div>
+                    <button type="button" onclick="login()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" > Login</button>
+                    <button type="button" onclick="sign_up()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal" >Sign Up</button>
+                  </div>
+              </li>
+           </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
+
+    <!-- Login Modal-->
+<div class="modal fade" id="loginModal" tabindex="-1" >
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="logintModalLabel">Login</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      You Are Logged In
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Sign Up Modal-->
+<div class="modal fade" id="signUpModal" tabindex="-1" >
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="logintModalLabel">Login</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      You Have Signed Up. Please Login With Your New Account!
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
     <div id="myBtnContainer" style="direction:rtl;" >
         <div class="dropdown">
             <button class="dropbtn">Filter</button>
@@ -570,24 +612,22 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
+<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyAnNtdNblvTkk_eOkoa0AQH9F-oCzNRb3Y",
-    authDomain: "login-8fd75.firebaseapp.com",
-    databaseURL: "https://login-8fd75-default-rtdb.firebaseio.com",
-    projectId: "login-8fd75",
-    storageBucket: "login-8fd75.appspot.com",
-    messagingSenderId: "338903581615",
-    appId: "1:338903581615:web:10e421ad512fb8d7d3a55a"
+    apiKey: "AIzaSyC5GerHx_xpLVXn04jlqypMF14TKJ7Y4X0",
+    authDomain: "contact-us-7178a.firebaseapp.com",
+    databaseURL: "https://contact-us-7178a-default-rtdb.firebaseio.com",
+    projectId: "contact-us-7178a",
+    storageBucket: "contact-us-7178a.appspot.com",
+    messagingSenderId: "527672547869",
+    appId: "1:527672547869:web:50f4a0e49945d5f46f04f4"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  var database = firebase.database();
+  var database=firebase.database();
 </script>
-<script src="login.js"></script>
+<script src="contact_us.js"></script>
   </body>
 </html>

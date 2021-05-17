@@ -1,12 +1,13 @@
 body{
     width: auto;
+    background-color:whitesmoke;
 }
 .contact-info{
     width: auto;
     padding: 50px;
 }
-.hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("house_header.jpeg");
+.head-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Irvine_Company.png");
     height: 100%;
     background-image: center;
     background-repeat: no-repeat;
@@ -20,4 +21,13 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+.dropdown-menu{
+        width: 300px;
+        background-color: black;
+        color: white;
+}
+.navbar{
+    font-size: 14pt;
+    padding: 15px;
 }
