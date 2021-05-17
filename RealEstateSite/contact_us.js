@@ -55,6 +55,5 @@ function login(){
     var errorMessage = error.message;
 
     window.alert(errorMessage);
-    document.getElementById("loginModal").hide()
   });
 }
