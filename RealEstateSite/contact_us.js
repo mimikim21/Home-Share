@@ -54,6 +54,6 @@ function login(){
     var errorCode = error.code;
     var errorMessage = error.message;
 
-    window.alert(errorMessage);
+    window.alert("The email and/or password does not exist. Please close out of this window and sign up for an account or try again.");
   });
 }
