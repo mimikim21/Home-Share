@@ -57,12 +57,3 @@ function login(){
     window.alert(errorMessage + " Please sign up for an account.");
   });
 }
-
-var user = firebase.auth().currentUser;
-
-if (user) {
-  // User is signed in.
-  document.getElementById
-} else {
-  // No user is signed in.
-}
