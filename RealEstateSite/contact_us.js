@@ -54,6 +54,6 @@ function login(){
     var errorCode = error.code;
     var errorMessage = error.message;
 
-    window.alert(errorMessage + " Please sign up for an account.");
+    window.alert(errorMessage);
   });
 }
